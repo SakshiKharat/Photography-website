@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            background-color: rgb(193, 149, 234);
+            width: 90%;
+            height: 100px;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .two{
+            background-color: blanchedalmond;
+            width: 90%;
+            height: 100px;
+            margin-top: 30px;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .three{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: cadetblue;
+            width:40%;
+            height:200px;
+            border: 1px solid black;
+            margin-top: 20px;
+            margin-left: 60px;
+            font-size: xx-large;
+            /*  */
+            
+
+        }
+        h1{
+            font-size: 70px;
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 20px;
+        }
+        </style>
+</head>
+<body>
+    <section style="display:flex">
+    <div>
+    <label for="a" ></label>
+    <input type="number" id="a" name="a" class="one">
+    <label for="b"></label>
+    <input type="number" id="b" name="b" class="two">
+    </div>
+    <div>
+        <h1>+</h1>
+    </div>
+    <div id="output" class="three" ></div>
+    </section>
+    
+    <script>
+        function calculateSum() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let c = a + b;
+            document.getElementById("output").innerHTML = c;
+        }
+        document.getElementById("a").addEventListener("input", calculateSum);
+        document.getElementById("b").addEventListener("input", calculateSum);
+    </script>
+</body>
+</html>

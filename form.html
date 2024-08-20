@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            align-items: center;
+            box-sizing: border-box;
+            margin-left: 500px;
+            font-size: x-large;
+            justify-content: space-around;
+            letter-spacing: 1px;
+            line-height: 30px;
+        }
+        button{
+            font-size: x-large;
+            background-color:black;
+            color: antiquewhite;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(42, 164, 2);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset style="background-color: azure;width:500px;height:auto;">
+        <legend>Booking Form</legend>
+        <label for="Name">Full Name:</label>
+        <input type="text" id="Name" name="Name"/>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"/>
+        <br><br>
+        <label for="Package">Package:</label><br>
+        <input type="radio" id="Package" name="Package" value="Wedding">Wedding<br>
+        <input type="radio" id="Package" name="Package" value="Pre-Wedding">Pre-Wedding<br>
+        <input type="radio" id="Package" name="Package" value="Modeling">Modeling<br>
+        <input type="radio" id="Package" name="Package" value="Birthday">Birthday<br>
+        <input type="radio" id="Package" name="Package" value="Others">Others<br><br>
+        <label for="start date">Booking start date:</label>
+        <input type="date" id="start date" name="start date"/><br>
+        <label for="start time">Booking start time:</label>
+        <input type="time" id="start time" name="start time"/><br><br>
+        <label for="start date">Booking end date:</label>
+        <input type="date" id="start date" name="start date"/><br>
+        <label for="end time">Booking end time:</label>
+        <input type="time" id="end time" name="end time"/><br><br>
+        Enter your specifications:
+        <textarea rows="6" cols="25"></textarea><br><br>
+        <button type="button">Book</button>
+    </form>
+    </fieldset>
+</body>
+</html>
