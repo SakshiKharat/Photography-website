@@ -3,56 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Booking Form</title>
     <style>
-        form{
+        body {
+            font-family: "Jost", sans-serif;
+            display: flex;
+            justify-content: center;
             align-items: center;
-            box-sizing: border-box;
-            margin-left: 500px;
-            font-size: x-large;
-            justify-content: space-around;
-            letter-spacing: 1px;
-            line-height: 30px;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
         }
-        button{
-            font-size: x-large;
-            background-color:black;
+        form {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: azure;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        fieldset {
+            border: none;
+        }
+        legend {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            font-size: 1.2rem;
+            background-color: black;
             color: antiquewhite;
             border-radius: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
         }
-        button:hover{
+        button:hover {
             background-color: rgb(42, 164, 2);
         }
     </style>
 </head>
 <body>
     <form>
-        <fieldset style="background-color: azure;width:500px;height:auto;">
-        <legend>Booking Form</legend>
-        <label for="Name">Full Name:</label>
-        <input type="text" id="Name" name="Name"/>
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"/>
-        <br><br>
-        <label for="Package">Package:</label><br>
-        <input type="radio" id="Package" name="Package" value="Wedding">Wedding<br>
-        <input type="radio" id="Package" name="Package" value="Pre-Wedding">Pre-Wedding<br>
-        <input type="radio" id="Package" name="Package" value="Modeling">Modeling<br>
-        <input type="radio" id="Package" name="Package" value="Birthday">Birthday<br>
-        <input type="radio" id="Package" name="Package" value="Others">Others<br><br>
-        <label for="start date">Booking start date:</label>
-        <input type="date" id="start date" name="start date"/><br>
-        <label for="start time">Booking start time:</label>
-        <input type="time" id="start time" name="start time"/><br><br>
-        <label for="start date">Booking end date:</label>
-        <input type="date" id="start date" name="start date"/><br>
-        <label for="end time">Booking end time:</label>
-        <input type="time" id="end time" name="end time"/><br><br>
-        Enter your specifications:
-        <textarea rows="6" cols="25"></textarea><br><br>
-        <button type="button">Book</button>
+        <fieldset>
+            <legend>Booking Form</legend>
+            <label for="Name">Full Name:</label>
+            <input type="text" id="Name" name="Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label>Package:</label>
+            <input type="radio" id="wedding" name="Package" value="Wedding" required>Wedding
+            <label for="wedding"></label>
+            <input type="radio" id="pre-wedding" name="Package" value="Pre-Wedding">Pre-wedding
+            <label for="pre-wedding"></label>
+            <input type="radio" id="modeling" name="Package" value="Modeling">Modeling
+            <label for="modeling"></label>
+            <input type="radio" id="birthday" name="Package" value="Birthday">Birthday
+            <label for="birthday"></label>
+            <input type="radio" id="others" name="Package" value="Others">Others
+            <label for="others"></label>
+            
+            <label for="start-date">Booking Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+            
+            <label for="start-time">Booking Start Time:</label>
+            <input type="time" id="start-time" name="start-time" required>
+            
+            <label for="end-date">Booking End Date:</label>
+            <input type="date" id="end-date" name="end-date" required>
+            
+            <label for="end-time">Booking End Time:</label>
+            <input type="time" id="end-time" name="end-time" required>
+            
+            <label for="specifications">Enter Your Specifications:</label>
+            <textarea id="specifications" name="specifications" rows="6" required></textarea>
+            
+            <button type="submit">Book</button>
+        </fieldset>
     </form>
-    </fieldset>
 </body>
 </html>
